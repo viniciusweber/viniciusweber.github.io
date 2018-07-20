@@ -2,7 +2,7 @@
  
 .slider {
 	display: block;
-	height: 1000px;
+	height: 700px;
 	width: 100%;
 	margin: auto;
 	margin-top: 20px;
@@ -10,7 +10,11 @@
 /*	margin-left:-150px; */
 	/*margin-bottom: 20px;*/
 }
- 
+
+ @media only screen and (max-width: 600px) {
+    .slider{ max-height: 300px !important; }
+}
+
 .slider li {
 	list-style: none;
 	position: absolute;
