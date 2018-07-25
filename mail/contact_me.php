@@ -1,6 +1,9 @@
 <?php
 // Check for empty fields
-
+if(empty($_POST['nome']) || empty($_POST['email']) || empty($_POST['telefone']) || empty($_POST['mensagem']) || !filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
+  http_response_code(500);
+  exit();
+}
 
 $nome = strip_tags(htmlspecialchars($_POST['nome']));
 $email = strip_tags(htmlspecialchars($_POST['email']));
